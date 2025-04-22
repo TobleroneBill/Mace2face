@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgncmcbiny22a"]
+
+[ext_resource type="Texture2D" uid="uid://cu8eb8k5ofucr" path="res://Assets/P_Mace/Rope/S_Rope.png" id="1_oax6g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uwx0e"]
+radius = 16.0
+
+[node name="Rope" type="Node2D"]
+
+[node name="B" type="RigidBody2D" parent="."]
+input_pickable = true
+
+[node name="SMace" type="Sprite2D" parent="B"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_oax6g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="B"]
+shape = SubResource("CircleShape2D_uwx0e")
+
+[node name="A" type="RigidBody2D" parent="."]
+position = Vector2(108, 0)
+input_pickable = true
+
+[node name="SMace" type="Sprite2D" parent="A"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_oax6g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="A"]
+shape = SubResource("CircleShape2D_uwx0e")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+node_a = NodePath("../A")
+node_b = NodePath("../B")

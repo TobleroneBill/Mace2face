@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://pfsuibuh65e4"]
+
+[ext_resource type="Script" path="res://Assets/P_Mace/PinMovement.gd" id="1_eachb"]
+[ext_resource type="Texture2D" uid="uid://scgjjmbvb0r" path="res://Assets/P_Mace/S_Mace.png" id="2_576mm"]
+[ext_resource type="Texture2D" uid="uid://mr8qcrymi8ia" path="res://Assets/P_Mace/S_Handle.png" id="3_li0m1"]
+[ext_resource type="Script" path="res://Assets/P_Mace/Head.gd" id="4_dtqcs"]
+[ext_resource type="Texture2D" uid="uid://cu8eb8k5ofucr" path="res://Assets/P_Mace/Rope/S_Rope.png" id="4_qvk02"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_71tey"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uwx0e"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s1vyx"]
+radius = 32.0156
+
+[node name="P_Mace" type="Node2D"]
+script = ExtResource("1_eachb")
+
+[node name="Handle" type="StaticBody2D" parent="."]
+position = Vector2(0, -152)
+input_pickable = true
+
+[node name="SMace" type="Sprite2D" parent="Handle"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_li0m1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Handle"]
+shape = SubResource("CircleShape2D_71tey")
+
+[node name="1" type="RigidBody2D" parent="."]
+position = Vector2(0, -113)
+collision_layer = 0
+collision_mask = 0
+input_pickable = true
+
+[node name="SMace" type="Sprite2D" parent="1"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("4_qvk02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1"]
+shape = SubResource("CircleShape2D_uwx0e")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="1"]
+node_a = NodePath("..")
+node_b = NodePath("../../Handle")
+softness = 1.0
+
+[node name="2" type="RigidBody2D" parent="."]
+position = Vector2(0, -74)
+collision_layer = 0
+collision_mask = 0
+input_pickable = true
+
+[node name="SMace" type="Sprite2D" parent="2"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("4_qvk02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2"]
+shape = SubResource("CircleShape2D_uwx0e")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="2"]
+node_a = NodePath("..")
+node_b = NodePath("../../1")
+softness = 1.0
+
+[node name="Head" type="RigidBody2D" parent="."]
+linear_damp = 3.0
+script = ExtResource("4_dtqcs")
+
+[node name="SMace" type="Sprite2D" parent="Head"]
+texture = ExtResource("2_576mm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head"]
+shape = SubResource("CircleShape2D_s1vyx")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Head"]
+node_a = NodePath("..")
+node_b = NodePath("../../2")
+
+[connection signal="input_event" from="Handle" to="." method="_on_handle_input_event"]

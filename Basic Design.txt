@@ -1,0 +1,18 @@
+Basic Game Idea - MACE TO THE FACE
+
+BALL AND CHAIN [MACE] THAT CAN BE MOVED BY CLICKING WITH MOUSE
+
+Right click to toggle its attach point onto on object
+from there it will dangle, so if on a moving platform it will go with it
+I think the objective is to just slam into enemies and kill them
+
+Tileset from: https://opengameart.org/content/pixel-art-castle-tileset
+
+
+TODO:
+	- Make moving platform work
+	- Connect function on the Mace so it sticks to an object
+	- Make a test level where the objective is to destroy some boxes
+	
+	---- MECHANIC IDEA ----
+	I think the main mechanic will be areas where the player can move the flail, but the mouse cannot interact
