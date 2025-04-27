@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6snx2e1py7il"]
+
+[ext_resource type="Script" uid="uid://d07vch1otlwc1" path="res://Assets/Doobies/Dooby_Basic/B_Dooby.gd" id="1_yvnre"]
+[ext_resource type="Texture2D" uid="uid://df76cnc17ejen" path="res://Assets/Doobies/Dooby_Basic/S_dooby.png" id="2_88kmy"]
+
+[node name="Dooby_Basic" type="Node2D"]
+script = ExtResource("1_yvnre")
+
+[node name="SDooby" type="Sprite2D" parent="."]
+texture = ExtResource("2_88kmy")

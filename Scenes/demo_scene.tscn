@@ -39,9 +39,11 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="P_Mace3" parent="." instance=ExtResource("4_5gjny")]
-position = Vector2(560, 307)
+position = Vector2(532, 323)
+metadata/_edit_group_ = true
 
 [node name="Tile Maps" type="Node2D" parent="."]
+metadata/_edit_group_ = true
 
 [node name="BG" type="TileMap" parent="Tile Maps"]
 tile_set = ExtResource("2_evt86")

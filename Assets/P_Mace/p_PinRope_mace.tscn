@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://pfsuibuh65e4"]
+[gd_scene load_steps=8 format=3 uid="uid://pfsuibuh65e4"]
 
 [ext_resource type="Script" uid="uid://bg61ki1mtf6se" path="res://Assets/P_Mace/PinMovement.gd" id="1_eachb"]
 [ext_resource type="Texture2D" uid="uid://scgjjmbvb0r" path="res://Assets/P_Mace/S_Mace.png" id="2_576mm"]
 [ext_resource type="Texture2D" uid="uid://mr8qcrymi8ia" path="res://Assets/P_Mace/S_Handle.png" id="3_li0m1"]
-[ext_resource type="Script" uid="uid://ckj0luh4tcypi" path="res://Assets/P_Mace/Head.gd" id="4_dtqcs"]
 [ext_resource type="Texture2D" uid="uid://cu8eb8k5ofucr" path="res://Assets/P_Mace/Rope/S_Rope.png" id="4_qvk02"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_71tey"]
@@ -67,7 +66,6 @@ softness = 1.0
 
 [node name="Head" type="RigidBody2D" parent="."]
 linear_damp = 3.0
-script = ExtResource("4_dtqcs")
 
 [node name="SMace" type="Sprite2D" parent="Head"]
 texture = ExtResource("2_576mm")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd5pybt4iyv7p"
-path="res://.godot/imported/Testbg.jpg-535724ec9e77ad5140d413d5860a5b65.ctex"
+uid="uid://df76cnc17ejen"
+path="res://.godot/imported/S_dooby.png-ef53274cbae384a3d92a88c0075837a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Testbg.jpg"
-dest_files=["res://.godot/imported/Testbg.jpg-535724ec9e77ad5140d413d5860a5b65.ctex"]
+source_file="res://Assets/Doobies/Dooby_Basic/S_dooby.png"
+dest_files=["res://.godot/imported/S_dooby.png-ef53274cbae384a3d92a88c0075837a4.ctex"]
 
 [params]
 
